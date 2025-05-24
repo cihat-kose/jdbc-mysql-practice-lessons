@@ -1,4 +1,4 @@
-# 💾 JDBC MySQL Practice Lessons
+## JDBC MySQL Practice Lessons
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 ![JDBC](https://img.shields.io/badge/JDBC-3776AB?style=for-the-badge&logo=java&logoColor=white)
@@ -11,7 +11,7 @@ A hands-on learning lab to master **JDBC** and SQL querying skills using the Sak
 
 ---
 
-## 🧠 What You Will Learn
+### What You Will Learn
 
 - How to connect to MySQL databases using JDBC
 - Execute SQL queries and navigate results with Java
@@ -21,7 +21,7 @@ A hands-on learning lab to master **JDBC** and SQL querying skills using the Sak
 
 ---
 
-## ⚙️ Tech Stack
+### Tech Stack
 
 - **Java 21**
 - **JDBC** (MySQL Connector)
@@ -31,7 +31,7 @@ A hands-on learning lab to master **JDBC** and SQL querying skills using the Sak
 
 ---
 
-## 🗂️ Project Structure
+### Project Structure
 
 ```
 jdbc-mysql-practice-lessons/
@@ -55,7 +55,7 @@ jdbc-mysql-practice-lessons/
 
 ---
 
-## 🚀 Getting Started
+### Getting Started
 
 ```bash
 # Clone the repository
@@ -71,7 +71,7 @@ mvn test
 
 ---
 
-## 📄 About the SQL Files
+### About the SQL Files
 
 The `.sql` scripts in this repo are for learning purposes only:
 
@@ -84,7 +84,7 @@ The `.sql` scripts in this repo are for learning purposes only:
 
 ---
 
-## 🎯 Who Should Use This?
+### Who Should Use This?
 
 This repo is a great fit if you're:
 
@@ -95,14 +95,14 @@ This repo is a great fit if you're:
 
 ---
 
-## 👨‍💻 Maintained by
+### Maintained by
 
 **[cihatkose](https://github.com/cihat-kose)**  
 Creating dev tools and educational resources for future engineers.
 
 ---
 
-## 📜 License
+### License
 
 This project is licensed under the [MIT License](LICENSE).
 
