@@ -1,4 +1,4 @@
-## JDBC MySQL Practice Lessons
+# JDBC MySQL Practice Lessons
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 ![JDBC](https://img.shields.io/badge/JDBC-3776AB?style=for-the-badge&logo=java&logoColor=white)
