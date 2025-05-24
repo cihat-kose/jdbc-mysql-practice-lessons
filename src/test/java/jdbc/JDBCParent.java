@@ -12,7 +12,7 @@ public class JDBCParent {
 
     @BeforeClass
     public void dbConnectionOpen() {
-        String hostUrl = "jdbc:mysql://demo.mersys.io:33906/sakila";
+        String hostUrl = "jdbc:mysql-sakila-db-practice-notes://demo.mersys.io:33906/sakila";
         String username = "admin";
         String password = "Techno24Study.%=";
 

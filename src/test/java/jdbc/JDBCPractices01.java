@@ -10,7 +10,7 @@ public class JDBCPractices01 {
     public void test1() throws SQLException {
 
         // What is done to make a query work
-        String hostUrl = "jdbc:mysql://demo.mersys.io:33906/sakila";
+        String hostUrl = "jdbc:mysql-sakila-db-practice-notes://demo.mersys.io:33906/sakila";
         String username = "admin";
         String password = "Techno24Study.%=";
 
@@ -19,7 +19,7 @@ public class JDBCPractices01 {
 
         // 2)- We have chose the database -->
         // This information was added to hostUrl (/sakila); no other additional action was taken
-        // String hostUrl = "jdbc:mysql://demo.mersys.io:33906/sakila";
+        // String hostUrl = "jdbc:mysql-sakila-db-practice-notes://demo.mersys.io:33906/sakila";
 
         // 3)- We opened the query screen
         Statement statement = connection.createStatement();
