@@ -15,21 +15,29 @@
         <argLine>-Duser.language=en</argLine>
     </properties>
 
-    <!-- Dependencies -->
+    <!-- Bağımlılıklar -->
     <dependencies>
-        <!-- TestNG library for organizing and managing test cases -->
+        <!-- TestNG: Test senaryolarını düzenlemek ve yönetmek için kullanılır -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.10.2</version>
+            <version>7.11.0</version>
             <scope>test</scope>
         </dependency>
 
-        <!-- MySQL JDBC driver for database connection and interaction with MySQL databases -->
+        <!-- MySQL JDBC sürücüsü: MySQL veritabanı ile bağlantı ve etkileşim için kullanılır -->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.33</version>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>9.3.0</version>
+        </dependency>
+
+        <!-- SLF4J: Konsolda gereksiz uyarıları engellemek için basit logger eklendi -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.36</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
