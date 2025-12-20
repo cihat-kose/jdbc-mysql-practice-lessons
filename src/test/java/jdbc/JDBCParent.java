@@ -12,9 +12,9 @@ public class JDBCParent {
 
     @BeforeClass
     public void dbConnectionOpen() {
-        String hostUrl = "jdbc:mysql-sakila-db-practice-notes://demo.mersys.io:33906/sakila";
-        String username = "admin";
-        String password = "Techno24Study.%=";
+        String hostUrl = "jdbc:mysql://localhost:3306/sakila";
+        String username = "root";
+        String password = ".MySQL01,";
 
         try {
             connection = DriverManager.getConnection(hostUrl, username, password);
