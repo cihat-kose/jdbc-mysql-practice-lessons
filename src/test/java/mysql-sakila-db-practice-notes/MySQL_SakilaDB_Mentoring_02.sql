@@ -141,7 +141,7 @@ HAVING SUM(rental_duration) >= 5;
 
 -- ------------------------------------------------------------------------
 -- Practice 08
--- Değeri (amount) 90'dan büyük olan kiralama işlemlerini döndürünüz.
+-- Film kiralama şirketinde, toplam ödeme tutarı (amount) 90'dan fazla olan müşterileri döndürünüz.
 
 SELECT 
     customer_id, SUM(amount) AS total_amount

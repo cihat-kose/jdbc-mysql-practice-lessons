@@ -173,7 +173,7 @@ WHERE
 
 -- ------------------------------------------------------------------------
 -- Practice 15
---  first_name öğesi ES içeren tüm aktörleri filtreleyiniz.alter
+--  first_name öğesi ES içeren tüm aktörleri filtreleyiniz.
 
 SELECT 
     *
@@ -262,7 +262,7 @@ ORDER BY last_name , first_name;
 -- Film tablosundan derecelendirmesi 'G' olan EN UZUN 10 filmi döndürünüz.
 
 SELECT 
-    film_id, title, length
+    film_id, title, length, rating
 FROM
     film
 WHERE
@@ -295,27 +295,35 @@ FROM
 
 -- ------------------------------------------------------------------------
 -- Practice 26
--- Film tablosundaki son 10 filmi döndürünüz.alter
+-- Film tablosundaki son 10 filmi döndürünüz.
 
-SELECT 
+-- 1.Yöntem
+SELECT
     film_id, title
 FROM
     film
-LIMIT 991 , 10;
+ORDER BY film_id DESC
+    LIMIT 10;
+
+-- 2.Yöntem
+SELECT
+    film_id, title
+FROM
+    film
+        LIMIT 990, 10;
 
 -- ------------------------------------------------------------------------
 -- Practice 27
--- Aktör tablosundaki yinelenmeyen soyisimleri yazdırınız.alter
+-- Aktör tablosundaki soyisimleri yinelenmeyecek şekilde yazdırınız.
 
 SELECT DISTINCT
     last_name
 FROM
     actor;
 
-
 -- ------------------------------------------------------------------------
 -- Practice 28
--- Tüm aktörleri ad, doyad ve tam adlarıyla birlikte döndürünüz. Örnek:| First Name | Last Name | Full Name|
+-- Tüm aktörleri ad, soyad ve tam adlarıyla birlikte döndürünüz. Örnek:| First Name | Last Name | Full Name|
 
 SELECT 
     first_name `First Name`,

@@ -41,7 +41,7 @@ FROM
         JOIN
     film_category ON category.category_id = film_category.category_id
 GROUP BY category.name
-HAVING COUNT(DISTINCT film_category.film_id) >= 60;
+HAVING film_count >=60;
 
 -- Bu sorgu, en az 60 farklı film içeren kategorileri filtreler.
 -- `HAVING COUNT(DISTINCT film_category.film_id) >= 60` ifadesi,
