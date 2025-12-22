@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class JDBCPractices02 extends Parent {
+public class JDBCPractices02 extends JDBCParent {
     @Test
     public void navigateRowsAndRetrieveColumns() throws SQLException {
         // TASK: "actor" tablosunda satırlar arasında gezinmeyi ve sütun verilerini almayı test eder.

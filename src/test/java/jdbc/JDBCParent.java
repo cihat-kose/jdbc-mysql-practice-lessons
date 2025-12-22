@@ -5,7 +5,7 @@ import org.testng.annotations.BeforeClass;
 
 import java.sql.*;
 
-public class Parent {
+public class JDBCParent {
     public static Connection connection;
     public static Statement statement;
 
