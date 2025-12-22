@@ -25,14 +25,14 @@ public class JDBCSakilaCustomerAddAndVerifyExample extends JDBCParent {
 
         // 1) Yeni müşteri ekle
         try {
-        System.out.println("\n1) Yeni Müşteri Ekleniyor:");
-        String soyad= "Erdem"; // Yeni müşterinin soyadı
-        int addressId=44; // Adres ID bilgisi
-        int aktif=1; // Müşteri aktif durumu
+            System.out.println("\n1) Yeni Müşteri Ekleniyor:");
+            String soyad= "Erdem"; // Yeni müşterinin soyadı
+            int addressId=44; // Adres ID bilgisi
+            int aktif=1; // Müşteri aktif durumu
 
-        // Yeni müşteri ekleme sorgusu
-        String yeniMusteriSorgu="INSERT INTO customer (store_id, first_name, last_name, email, address_id, active) " +
-                "VALUES (1, '" + expectedFirstName + "', '" + soyad + "', '" + expectedMail + "', " + addressId + ", " + aktif + ")";
+            // Yeni müşteri ekleme sorgusu
+            String yeniMusteriSorgu="INSERT INTO customer (store_id, first_name, last_name, email, address_id, active) " +
+                    "VALUES (1, '" + expectedFirstName + "', '" + soyad + "', '" + expectedMail + "', " + addressId + ", " + aktif + ")";
 
             statement= connection.createStatement();
             statement.executeUpdate(yeniMusteriSorgu);

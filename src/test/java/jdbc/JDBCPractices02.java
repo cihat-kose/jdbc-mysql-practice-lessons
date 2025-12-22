@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class JDBCPractices02 extends JDBCParent {
-
     @Test
     public void navigateRowsAndRetrieveColumns() throws SQLException {
         // TASK: "actor" tablosunda satırlar arasında gezinmeyi ve sütun verilerini almayı test eder.
@@ -70,13 +69,13 @@ public class JDBCPractices02 extends JDBCParent {
         ResultSet resultTable = statement.executeQuery("select * from actor");
 
         // İlk satıra gidiyoruz ve satır numarasını ve ikinci sütundaki veriyi yazdırıyoruz
-        resultTable.first(); // İlk satıra gider
-        System.out.println("resultTable.getRow() = " + resultTable.getRow());
-        System.out.println("resultTable.getString(2) = " + resultTable.getString(2));
+        resultTable.first(); // İlk satıra git
+        System.out.println("First Row Number: " + resultTable.getRow());
+        System.out.println("Second Column Value: " + resultTable.getString(2));
 
-        // Son satıra gidiyoruz ve ikinci sütundaki veriyi ve satır numarasını yazdırıyoruz
-        resultTable.last(); // Son satıra gider
-        System.out.println("resultTable.getString(2) = " + resultTable.getString(2));
-        System.out.println("resultTable.getRow() = " + resultTable.getRow());
+        // Son satıra gidiyoruz ve satır numarasını ve "first_name" sütunundaki veriyi yazdırıyoruz
+        resultTable.last(); // Son satıra git
+        System.out.println("Last Row Number: " + resultTable.getRow());
+        System.out.println("First Name in Last Row: " + resultTable.getString("first_name"));
     }
 }
