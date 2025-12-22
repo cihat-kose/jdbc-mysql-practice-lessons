@@ -35,8 +35,13 @@ public class JDBCPractices01 {
         System.out.println("name = " + name);
         System.out.println("lastName = " + lastName);
 
+        resultTable.next(); // İkinci satıra geçildi
 
+        name = resultTable.getString("first_name"); // Aktörün adı alındı
+        lastName = resultTable.getString("last_name"); // Aktörün soyadı alındı
+        System.out.println("name = " + name);
+        System.out.println("lastName = " + lastName);
 
-
+        connection.close(); // Bağlantı kapatıldı
     }
 }
