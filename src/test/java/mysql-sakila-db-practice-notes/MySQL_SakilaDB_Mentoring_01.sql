@@ -11,7 +11,7 @@ USE sakila;
 -- Practice 02
 -- Tüm aktörlerin soyadını (last_name) döndürünüz.
 
-SELECT
+SELECT 
     last_name
 FROM
     actor;
@@ -20,7 +20,7 @@ FROM
 -- Practice 03
 -- Tüm aktörlerin ilk adını (first_name) ve soyadını (last_name) döndürünüz.
 
-SELECT
+SELECT 
     first_name, last_name
 FROM
     actor;
@@ -30,25 +30,25 @@ FROM
 -- Aktör tablosundaki tüm sütunları döndürünüz.
 
 -- 1. yöntem:
-SELECT
+SELECT 
     *
 FROM
     actor;
-
+    
 -- 2. yöntem:
-SELECT
+SELECT 
     actor_id, first_name, last_name, last_update
 FROM
     actor;
-
+    
 -- ------------------------------------------------------------------------
 -- Practice 05
 -- 60/3*5 şeklindeki matematik işleminin sonucunu döndürünüz.
 
 -- 1. yöntem:
-SELECT 60 / 3 * 5;
-
--- 2. yöntem:
+ SELECT 60 / 3 * 5;
+ 
+ -- 2. yöntem:
 SELECT 60 / 3 * 5 FROM DUAL;
 
 -- ------------------------------------------------------------------------
@@ -65,7 +65,7 @@ SELECT NOW() FROM DUAL;
 -- Practice 07
 -- Soyadı ALLEN olan tüm oyuncuları döndürünüz.
 
-SELECT
+SELECT 
     *
 FROM
     actor
@@ -76,29 +76,29 @@ WHERE
 -- Practice 08
 -- Soyadları DAVIS ve adları SUSAN olan tüm aktörleri döndürünüz:
 
-SELECT
+SELECT 
     *
 FROM
     actor
 WHERE
     last_name = 'DAVIS'
-  AND first_name = 'SUSAN';
+        AND first_name = 'SUSAN';
 
 -- ------------------------------------------------------------------------
 -- Practice 09
 -- Soyadları ALLEN veya DAVIS olan tüm aktörleri döndürünüz.
 
 -- 1. Yöntem
-SELECT
+SELECT 
     *
 FROM
     actor
 WHERE
     last_name = 'ALLEN'
-   OR last_name = 'DAVIS';
+        OR last_name = 'DAVIS';
 
 -- 2.Yöntem
-SELECT
+SELECT 
     *
 FROM
     actor
@@ -110,7 +110,7 @@ WHERE
 -- Practice 10
 -- Soyadı DAVIS olan ve actor_id değeri 100'den küçük olan aktörleri döndürünüz.
 
-SELECT
+SELECT 
     *
 FROM
     actor
@@ -122,7 +122,7 @@ WHERE
 -- Değiştirme maliyeti 1 ile 10 fiyat arasında OLAN filmleri döndürünüz.
 
 -- 1.Yöntem
-SELECT
+SELECT 
     film_id, title, replacement_cost
 FROM
     film
@@ -130,19 +130,19 @@ WHERE
     replacement_cost BETWEEN 1 AND 10;
 
 -- 2. Yöntem
-SELECT
+SELECT 
     film_id, title, replacement_cost
 FROM
     film
 WHERE
     replacement_cost >= 1
-  AND replacement_cost <= 10;
+        AND replacement_cost <= 10;
 
 -- ------------------------------------------------------------------------
 -- Practice 12
 -- Değiştirme maliyeti 1 ile 10 fiyat arasında OLMAYAN filmleri döndürünüz.
 
-SELECT
+SELECT 
     film_id, title, replacement_cost
 FROM
     film
@@ -153,7 +153,7 @@ WHERE
 -- Practice 13
 -- İlk_adı P ile başlayan tüm aktörleri filtreleyiniz.
 
-SELECT
+SELECT 
     *
 FROM
     actor
@@ -164,7 +164,7 @@ WHERE
 -- Practice 14
 -- İlk_adı ES ile biten tüm aktörleri filtreleyiniz.
 
-SELECT
+SELECT 
     *
 FROM
     actor
@@ -175,7 +175,7 @@ WHERE
 -- Practice 15
 --  first_name öğesi ES içeren tüm aktörleri filtreleyiniz.
 
-SELECT
+SELECT 
     *
 FROM
     actor
@@ -186,7 +186,7 @@ WHERE
 -- Practice 16
 -- first_name'i AY ile biten ve 3 karakter içeren tüm aktörleri filtreleyiniz.
 
-SELECT
+SELECT 
     *
 FROM
     actor
@@ -197,7 +197,7 @@ WHERE
 -- Practice 17
 -- Adı A ile başlamayan tüm kategorileri filtreleyiniz.
 
-SELECT
+SELECT 
     *
 FROM
     category
@@ -208,7 +208,7 @@ WHERE
 -- Practice 18
 -- Parola belirlememiş tüm personeli ad ve soyadları ile birlikte listeleyiniz.
 
-SELECT
+SELECT 
     first_name, last_name, password
 FROM
     staff
@@ -219,7 +219,7 @@ WHERE
 -- Practice 19
 -- Parola belirlememiş tüm personeli ad, soyad ve parolaları ile birlikte listeleyiniz.
 
-SELECT
+SELECT 
     first_name, last_name, password
 FROM
     staff
@@ -230,7 +230,7 @@ WHERE
 -- Practice 20
 -- Tüm aktörleri soyadlarına göre ARTAN sırada döndürünüz.
 
-SELECT
+SELECT 
     actor_id, first_name, last_name
 FROM
     actor
@@ -240,7 +240,7 @@ ORDER BY last_name ASC;
 -- Practice 21
 -- Tüm aktörleri soyadlarına göre AZALAN sırada döndürünüz.
 
-SELECT
+SELECT 
     actor_id, first_name, last_name
 FROM
     actor
@@ -251,7 +251,7 @@ ORDER BY last_name DESC;
 -- Practice 22
 -- Tüm aktörleri,soyadları öncelikli olmak üzere soyadlarına ve adlarına göre artan sırada döndürünüz.
 
-SELECT
+SELECT 
     actor_id, first_name, last_name
 FROM
     actor
@@ -261,34 +261,34 @@ ORDER BY last_name , first_name;
 -- Practice 23
 -- Film tablosundan derecelendirmesi 'G' olan EN UZUN 10 filmi döndürünüz.
 
-SELECT
+SELECT 
     film_id, title, length, rating
 FROM
     film
 WHERE
     rating = 'G'
 ORDER BY length DESC
-    LIMIT 10;
+LIMIT 10;
 
 -- ------------------------------------------------------------------------
 -- Practice 24
 -- Film tablosundan derecelendirmesi 'G' olan EN KISA 10 filmi döndürünüz.
 
-SELECT
+SELECT 
     film_id, title, length
 FROM
     film
 WHERE
     rating = 'G'
 ORDER BY length
-    LIMIT 10;
+LIMIT 10;
 
 
 -- ------------------------------------------------------------------------
 -- Practice 25
--- Film tablosunun satır sayısını döndürünüz.
+-- Film tablosunun satır sayısını döndürünüz. 
 
-SELECT
+SELECT 
     COUNT(*)
 FROM
     film;
@@ -325,7 +325,7 @@ FROM
 -- Practice 28
 -- Tüm aktörleri ad, soyad ve tam adlarıyla birlikte döndürünüz. Örnek:| First Name | Last Name | Full Name|
 
-SELECT
+SELECT 
     first_name `First Name`,
     last_name `Last Name`,
     CONCAT(first_name, ', ', last_name) `Full Name`
